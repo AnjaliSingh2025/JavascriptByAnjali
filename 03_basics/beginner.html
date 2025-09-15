@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Beginner JS Practice</title>
+ <!-- <style rel="stylesheet" href="style.cs"></style> -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f0f9ff, #cbebff);
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #004d80;
+      margin-bottom: 30px;
+    }
+
+    .box {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 400px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #0077b6;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background: #0077b6;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #023e8a;
+    }
+
+    input[type="text"] {
+      padding: 8px;
+      width: 80%;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    #hoverText {
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <h1>Beginner JavaScript Events Practice 🎯</h1>
+
+  <!-- Click Event -->
+  <div class="box">
+    <h2>Click Event</h2>
+    <button onclick="alert('You clicked the button! 🎉')">Click Me</button>
+  </div>
+
+  <!-- Mouse Over Event -->
+  <div class="box">
+    <h2>Mouse Over Event</h2>
+    <p id="hoverText" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">
+      Hover over me to change my color!
+    </p>
+  </div>
+
+  <!-- Input Event -->
+  <div class="box">
+    <h2>Input Event</h2>
+    <input type="text" id="nameInput" placeholder="Type your name..." oninput="showName()">
+    <p id="nameOutput"></p>
+  </div>
+
+  <!-- Keypress Event -->
+  <div class="box">
+    <h2>Keypress Event</h2>
+    <input type="text" onkeydown="alert('Key pressed! ⌨️')" placeholder="Press any key here">
+  </div>
+
+  <!-- Change Background -->
+  <div class="box">
+    <h2>Change Background Color</h2>
+    <button onclick="document.body.style.backgroundColor='lightblue'">Blue</button>
+    <button onclick="document.body.style.backgroundColor='lightyellow'">Yellow</button>
+    <button onclick="document.body.style.backgroundColor='white'">Reset</button>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
